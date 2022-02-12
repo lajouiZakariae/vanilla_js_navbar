@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#"><div class="navbar-brand">Blogify</div></a>
+
+        <ul id="mainNav" class="navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li class="has_menu">
+            <a href="#">Categories</a>
+            <!-- START DROPDOWN -->
+            <ul>
+              <li>
+                <a href="">Wordpress</a>
+              </li>
+              <li>
+                <a href="">Html</a>
+              </li>
+              <li>
+                <a href="">Css</a>
+              </li>
+            </ul>
+            <!-- END DROPDOWN -->
+          </li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <div
+          role="button"
+          id="navbarToggler"
+          class="navbar-toggler"
+          data-target="mainNav"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.getElementById("navbarToggler").onclick = function () {
+        document.getElementById(this.dataset.target).classList.toggle("show");
+        this.classList.toggle("show");
+      };
+      document.querySelector(".has_menu a").onmouseover = function (ev) {
+        var ul = document
+          .querySelector(".has_menu ul")
+          .classList.add("show_dropdown");
+      };
+      document.querySelector(".has_menu a").onmouseout = function (ev) {
+        var ul = document
+          .querySelector(".has_menu ul")
+          .classList.remove("show_dropdown");
+      };
+    </script>
+  </body>
+</html>
