@@ -53,21 +53,6 @@
       </div>
     </nav>
 
-    <script>
-      document.getElementById("navbarToggler").onclick = function () {
-        document.getElementById(this.dataset.target).classList.toggle("show");
-        this.classList.toggle("show");
-      };
-      document.querySelector(".has_menu a").onmouseover = function (ev) {
-        var ul = document
-          .querySelector(".has_menu ul")
-          .classList.add("show_dropdown");
-      };
-      document.querySelector(".has_menu a").onmouseout = function (ev) {
-        var ul = document
-          .querySelector(".has_menu ul")
-          .classList.remove("show_dropdown");
-      };
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
